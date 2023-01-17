@@ -1,0 +1,29 @@
+select * from staff
+/*4*/ select propertyno from property
+SELECT staffNo, fname, lname, salary/12 AS monthly_salary FROM staff
+select * from staff where salary>10000
+select street from branch where city = 'London' or city = 'Glasgow' 
+select * from staff where salary between 20000 and 30000
+select street from staff where position = 'manager' or city = 'suervisor'
+select * from PrivateOwner where address like '%Glasgow%'
+/* 11 */
+select salary from staff order by salary desc
+/* 13 */
+select COUNT(rent) from propertyforrent where rent > 350
+
+SELECT count(propertyforrent.propertyno), viewin.viewdate
+FROM propertyforrent
+Inner JOIN viewing ON propertyforrent.propertyno = viweing.propertyno
+where viewdate = '2001-5'
+
+/* 16 */ select sum(salary) from staff
+select avg(salary), min(salary), max(salary) from staff
+
+
+SELECT count(propertyforrent.propertyno), 
+FROM propertyforrent
+Inner JOIN viewing ON propertyforrent.propertyno = viweing.propertyno
+where viewdate = '2001-5'
+
+
+
